@@ -10,6 +10,7 @@ import javax.validation.Valid;
 
 import com.DeliveryRestaurante.appweb.model.Contacto;
 import com.DeliveryRestaurante.appweb.repository.ContactoRepository;
+import edu.utp.chamcha.repository.ContactoRepository;
 
 @Controller
 public class ContactoController{

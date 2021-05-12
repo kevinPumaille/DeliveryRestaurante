@@ -10,6 +10,7 @@ import org.springframework.validation.BindingResult;
 import com.DeliveryRestaurante.appweb.model.Cliente;
 import com.DeliveryRestaurante.appweb.repository.ClienteRepository;
 import com.DeliveryRestaurante.appweb.repository.UsuarioRepository;
+import edu.utp.chamcha.repository.ClienteRepository;
 
 import javax.validation.Valid;
 
