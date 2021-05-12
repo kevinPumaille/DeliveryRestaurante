@@ -11,7 +11,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 
 @Entity
-@Table(name = "t_contact")
+@Table(name = "t_contactt")
 public class Contact {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
