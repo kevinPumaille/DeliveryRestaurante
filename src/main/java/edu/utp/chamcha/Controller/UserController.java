@@ -1,4 +1,4 @@
-package edu.utp.chamcha.Controller;
+package edu.utp.chamcha.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
