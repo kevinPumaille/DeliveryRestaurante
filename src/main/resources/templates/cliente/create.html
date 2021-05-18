@@ -43,7 +43,7 @@
             <form th:object="${client}" th:action="@{/cliente/create}" method="post">
                 <div class="row">
                     <div class="col-6 col-lg-3 mx-auto mt-4 text-light">
-                        <input type="text" th:field="*{user.email}" class="input-direc form-control text-light" placeholder="Ingrese correo" aria-label="Username" aria-describedby="basic-addon1">
+                        <input type="email" th:field="*{user.email}" class="input-direc form-control text-light" placeholder="Ingrese correo" aria-label="Username" aria-describedby="basic-addon1">
                     </div>
                 </div>
         
@@ -55,7 +55,7 @@
     
                 <div class="row">
                     <div class="col-6 col-lg-3 mx-auto mt-4 text-light">
-                        <input type="text" th:field="*{user.password}" class="input-direc form-control text-light" placeholder="Ingrese contraseña" aria-label="Username" aria-describedby="basic-addon1">
+                        <input type="password" th:field="*{user.password}" class="input-direc form-control text-light" placeholder="Ingrese contraseña" aria-label="Username" aria-describedby="basic-addon1">
                     </div>
                 </div>
         
@@ -64,8 +64,9 @@
                         <button th:with="text='Registrar'" class="btn btn-outline-light w-100" type="submit" th:text="${text}" />
                     </div>
                 </div>
+                <p th:text="${mensaje}" class="text-white"/>
             </form>
-            <p th:text="${mensaje}" />
+            
         </div>
      </div>
 
