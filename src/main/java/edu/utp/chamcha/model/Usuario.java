@@ -18,8 +18,8 @@ import lombok.*;
 public class Usuario {
     @Id
     @Column(name = "user_id")
-    private String nombre;
     private String email;
+    private String nombre;
     private String password;
     
     public String getNombre() {
