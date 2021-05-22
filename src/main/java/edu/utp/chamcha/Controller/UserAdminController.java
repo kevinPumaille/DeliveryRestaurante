@@ -10,43 +10,37 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
-
-import edu.utp.chamcha.repository.UsuarioRepository;
-import edu.utp.chamcha.model.Usuario;
+import edu.utp.chamcha.model.UsuarioAdmin;
+import edu.utp.chamcha.repository.UsuarioAdminRepository;
 
 @Controller
-public class UserController {
+public class UserAdminController {
 
-    private static final String INDEX ="usuario/login"; 
+    private static final String INDEX ="administrador/loginAdmin"; 
     private static String MODEL_CONTACT="user";
-    private static String MODEL_MESSAGE="mensaje";
-    private final UsuarioRepository usuariosData;
+    private static String MODEL_MESSAGE="mensaje";    
+    private final UsuarioAdminRepository usuariosAdminData;
 
-
-
-    public UserController(UsuarioRepository usuariosData){
-        this.usuariosData = usuariosData;
+    public UserAdminController(UsuarioAdminRepository usuariosAdminData){
+        this.usuariosAdminData = usuariosAdminData;
     }
 
-    
-
-    
-    @GetMapping("/usuario/login")
-    public String loginUser(Model model){
-        model.addAttribute(MODEL_CONTACT,new Usuario());
+    @GetMapping("/administrador/login")
+    public String loginAdmin(Model model){
+        model.addAttribute(MODEL_CONTACT,new UsuarioAdmin());
         return INDEX;
     }
 
-    @PostMapping("/usuario/login")
-    public String loginSubmitForm(Model model, @Valid Usuario objUser,BindingResult result){
+    @PostMapping("/administrador/login")
+    public String loginSubmitFormAdmin(Model model, @Valid UsuarioAdmin objUserAdmin,BindingResult result){
         String page = INDEX;
-        model.addAttribute(MODEL_CONTACT, new Usuario());        
+        model.addAttribute(MODEL_CONTACT, new UsuarioAdmin());        
         if(result.hasFieldErrors()) {
             model.addAttribute(MODEL_MESSAGE, "No se ha podido loguear");
         }else{
-            Optional<Usuario> userDB = this.usuariosData.findById(objUser.getEmail());
+            Optional<UsuarioAdmin> userDB = this.usuariosAdminData.findById(objUserAdmin.getEmail());
             if(userDB.isPresent()){
-                if(userDB.get().getPassword().equals(objUser.getPassword())){
+                if(userDB.get().getPassword().equals(objUserAdmin.getPassword())){
                     model.addAttribute(MODEL_CONTACT,userDB.get());
                     model.addAttribute(MODEL_MESSAGE, "Usuario existe");
                     page="welcome";  
@@ -59,6 +53,4 @@ public class UserController {
         }
         return page;
     }
-    
-    
 }

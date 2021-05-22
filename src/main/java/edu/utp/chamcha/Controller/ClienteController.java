@@ -46,4 +46,10 @@ public class ClienteController {
         return INDEX;
     }
 
+    @GetMapping("cliente/carta")
+    public String carta(){         
+        return "cliente/carta";
+    }
+
+
 }

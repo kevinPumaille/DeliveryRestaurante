@@ -27,11 +27,5 @@ public class Cliente {
     @JoinColumn(name = "user_id")
     private Usuario user;
 
-    public Usuario getUser() {
-        return user;
-    }
 
-    public void setUser(Usuario user) {
-        this.user = user;
-    }
 }
