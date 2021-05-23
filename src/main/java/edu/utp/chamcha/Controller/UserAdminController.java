@@ -43,7 +43,7 @@ public class UserAdminController {
                 if(userDB.get().getPassword().equals(objUserAdmin.getPassword())){
                     model.addAttribute(MODEL_CONTACT,userDB.get());
                     model.addAttribute(MODEL_MESSAGE, "Usuario existe");
-                    page="welcome";  
+                    page="administrador/administracionUsuario";  
                 }else{
                     model.addAttribute(MODEL_MESSAGE, "Password no coincide");  
                 }
