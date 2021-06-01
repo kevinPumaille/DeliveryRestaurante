@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html xmlns:th="https://www.thymeleaf.org" 
+    th:replace="~{fragments/layout :: layout (~{::body},'cliente')}">
+
+<body>
+
+  <br><br><br><br>
+<!-- IDEA: ----------------------- Chat-root -->
+
+<div class="container   ">
+  
+<div class="row justify-content-center "> 
+  <div class="  col-md-4 col-11  pt-3 " style="/*width:30%; /*background:#FCF3CF;*/">
+    <div class="container">
+      <div class="row">
+        <div class="bg-light  shadow pt-4 radio_">
+          
+        <div class="col-12 text-center ">  <h6 class="h4">Chat en Linea </h6></div>
+  
+        <div class="   pt-4  text-center">
+      <p> <img src="../img/chatboot.svg" class="rounded-circle  border shadow " style=" background:#58D68D; " width="50"> Hola, ¿en que podemos ayudarle? </p>
+      </div>
+      <div class=" col-12 d-flex justify-content-center align-items-center mb-4 pt-4 ">
+        <input class="whats-input" id="whats-in" type="text" Placeholder="Enviar mensaje..." />
+      
+        <a class="send-msPopup " id="send-btn" target="_blank"  href="https://api.whatsapp.com/send?phone=931863427" style="background-color:#ffffff;  text-decoration:none;">
+          <i class="material-icons icon-font-color--black"  href="https://api.whatsapp.com/send?phone=931863427" style="color: black;">send</i>
+        
+        
+        </a>
+        
+      </div> 
+        </div>
+      </div>
+    </div>
+</div>
+</div>
+</div>
+
+<script type="text/javascript">
+let btnOpenPopup = document.querySelector('.whatsapp-button');
+let popup = document.querySelector('.popup-whatsapp');
+popup.classList.toggle('is-active-whatsapp-popup')
+popup.style.animation = "fadeIn .6s 0.0s both";
+</script>
+
+<!-- IDEA: -------------------------Chat-root end -->
+
+
+
+</section>
+
+
+
+
+<!-- COMBAK: ---------------------------------------------------------------- -->
+
+
+</body>
+
+</html>
