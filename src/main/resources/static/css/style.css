@@ -106,7 +106,7 @@ background-size: cover;
    .cn i:hover{
      /*
      //background-color: #4AF997;*/
-   color: :#EE5228;
+   color:#EE5228;
    }
    
    
@@ -119,4 +119,14 @@ background-size: cover;
 .search--placeholder {
   background-color: transparent;
 }
- 
+ /* ----------------------------------style de detalles de pedido */
+ .detalle-pedido{
+  background-color: rgba(212, 197, 197, 0.61);
+}
+div.detalle-pedido{
+  background-color: rgba(212, 197, 197, 0.61);
+
+}
+
+
+/* ------------------------------------------ */
