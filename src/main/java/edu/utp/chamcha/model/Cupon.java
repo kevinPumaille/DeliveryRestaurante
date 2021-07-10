@@ -25,6 +25,19 @@ public class Cupon {
     /*
     @Temporal(TemporalType.DATE)
     private Date dueDate;*/
+    public Long getId() {
+        return id;
+    }
+    public void setId(Long id) {
+        this.id = id;
+    }
+    public String getCodigo_cupon() {
+        return codigo_cupon;
+    }
+    public void setCodigo_cupon(String codigo_cupon) {
+        this.codigo_cupon = codigo_cupon;
+    }
+    
 }
 
 

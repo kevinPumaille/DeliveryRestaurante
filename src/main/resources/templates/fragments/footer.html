@@ -36,20 +36,36 @@
 </footer>
 
 <!-- Carta -->
-<div class="col-sm-8 col-lg-5 mx-auto mt-5 text-center "th:fragment="carta">
-  <div class="container p-4 caja-comida">
-      <div class="row">
-          <div class="col-5">
-              <img src="../img/comida1/Fuente de Aji de gallina para 2 personas.webp" alt="" class="w-100 h-100">
-          </div>
-          <div class="col-7 text-light">
-              <h4>Fuente de Aji de gallina para 2 personas</h4>
-              <a class="btn col-lg-8 text-center text-light p-1 mt-3 boton-caja">                                    
-                  <span>Agregar</span>                                    
-                  <span>s./ 20.00</span>                                    
-              </a>
-          </div>
-      </div>
-  </div>                
-</div>
+<div class="container p-4 caja-comida " th:fragment="carta">
+  <div class="row">
+      <div class="col-5 ">
+          <img class="w-100 h-100 img-fluid" src="../static/img/Comidas1/${rowProducto.imageFileName}"
+              th:src="@{'/img/Comidas1/'+${rowProducto.imageFileName}}">
 
+      </div>
+      <div class="col-7 text-light ">
+          <h5 class="card-title text-center h5">
+              <p th:text="${rowProducto.menu}" />
+          </h5>
+          <div class="mb-3 ">
+              <span class="card-text h7 justify-content-left "
+                  th:text="${rowProducto.descripcion}"></span>
+
+          </div>
+          <div class="bg-dark rounded-3 mb-2">
+
+              <a href="" class="   rounded-3 " style="text-decoration: none; color: beige;">
+                  <div class="  d-md-block   d-flex justify-content-between align-items-center">
+                      <div class="d-flex justify-content-between align-items-center">
+                          <h6 class=" text-left">Agregar</h6>
+                          <h6 class="text-end">s/</h6>
+                          <h6 class="text-end" th:text="${rowProducto.precio}"></h6>
+                      </div>
+                  </div>
+          </div>
+          </a>
+      </div>
+
+  </div>
+
+</div>

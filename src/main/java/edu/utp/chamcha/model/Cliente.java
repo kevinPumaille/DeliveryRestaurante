@@ -26,17 +26,28 @@ public class Cliente {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String firstName;
-    private String lastName;
-    private String email;
-    private String phone; 
-    @DateTimeFormat(pattern = "dd/MM/yyyy")
-    private Date birthdate; 
-    private String gender;
-    private String maritalStatus;  
+ 
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
-    private Usuario user;   
+    private Usuario user;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Usuario getUser() {
+        return user;
+    }
+
+    public void setUser(Usuario user) {
+        this.user = user;
+    }   
+
+    
 }
 
 

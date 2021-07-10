@@ -22,24 +22,13 @@ public class CartaController {
     private final ProductoRepository productsData;
     
     
-    public CartaController(ProductoRepository productsData
-        ){
+    public CartaController(ProductoRepository productsData){
         this.productsData = productsData;
-        
     }  
-/*
-    @GetMapping("cliente/carta")
-    public String carta(){         
-        return "cliente/carta";
-    }
-
-*/
-
     
-
     @GetMapping("/cliente/carta")
     public String index(Model model){
-        List<Producto> listProducto = this.productsData.getAllActiveProductos();
+        List<Producto> listProducto = this.productsData.findAll();
         model.addAttribute("productos",listProducto);
         return INDEX_A;
     }    
