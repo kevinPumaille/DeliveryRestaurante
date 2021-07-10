@@ -13,7 +13,7 @@
    
           <h3 class="text-center pt-4">Nuevo Producto</h3><hr class="">
 
-          <form class="  container-flud "  th:object="${producto}" th:action="@{/producto/edit}" method="post">
+          <form class="  container-flud "  th:object="${producto}" th:action="@{/producto/edit/{id}}" method="post">
           
             <input type="hidden" th:field="*{id}"/>
          
@@ -81,7 +81,7 @@
 
                       </div>
                       <div class="col-12 justify-content-between align-items-center pt-4 mb-3">
-                          <a href="" class="text-left btn btn-warning ">regresar</a>
+                          <a href="/producto/index" class="text-left btn btn-warning ">regresar</a>
                           
                       </div>
   

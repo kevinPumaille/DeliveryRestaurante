@@ -84,7 +84,7 @@ public class ProductoController {
         return VIEW_EDIT;
     }  
 
-    @PostMapping("/producto/edit")
+    @PostMapping("/producto/edit/{id}")
 	public String update(
 			@Valid Producto objProducto,
 			BindingResult bindingResult
@@ -93,9 +93,20 @@ public class ProductoController {
 			return "redirect:/producto/edit/{id}";
 		}
 		this.productsData.save(objProducto);
-		return VIEW_INDEX;
+		return VIEW_EDIT;
 	}
 
+    // @GetMapping("/eliminar")
+    // public String eliminar(@PathVariable("id") Integer id, Model model){        
+    //     this.productsData.delete(id);
+    //     return "redirect:/producto/index";
+    // } 
+
+    @GetMapping("/eliminar")
+    public String eliminar(Producto prod){        
+        this.productsData.delete(prod);
+        return "redirect:/producto/index";
+    } 
 
 }
 

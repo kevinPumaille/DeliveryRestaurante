@@ -83,7 +83,7 @@
             <td>
                
               <a th:href="@{'/producto/edit/__${producto.id}__'}"  class="btn btn-info" role="button">Edit</a>
-              <a href=""> Eliminar</a>  
+              <a th:href="@{/eliminar(id=${producto.id})}"  class="btn btn-info" role="button"> Eliminar</a>  
             </td>
             </tr>
           </tbody>
