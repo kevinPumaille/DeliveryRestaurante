@@ -43,7 +43,7 @@
                 </div>
                 
                 <div class="col-3 col-md-3 col-lg-2 text-center pt-5 ">
-                    <button type="button" class="btn btn-dark">xd</button>
+                    <button type="button" class="btn btn-dark"></button>
                 </div>
                 
             </div>            
@@ -54,7 +54,10 @@
 
   <div class="container"><br>
     <div class="row">
+      <div class="mb-5  col-12 col-md-8">
       <a href="/producto/create" class="btn btn-success">Create</a>
+
+      </div>
 
           <div class="col-md-12">
                 <table class="table table-bordered rounded-3 text-center table-hover">
@@ -82,8 +85,8 @@
             </td>
             <td>
                
-              <a th:href="@{'/producto/edit/__${producto.id}__'}"  class="btn btn-info" role="button">Edit</a>
-              <a th:href="@{/eliminar(id=${producto.id})}"  class="btn btn-info" role="button"> Eliminar</a>  
+              <a th:href="@{'/producto/edit/__${producto.id}__'}"  class="btn btn-warning" role="button">Edit</a>
+              <a th:href="@{/eliminar(id=${producto.id})}"  class="btn btn-danger" role="button"> Eliminar</a>  
             </td>
             </tr>
           </tbody>
