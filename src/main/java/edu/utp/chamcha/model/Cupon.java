@@ -33,6 +33,7 @@ public class Cupon {
     }
     public String getCodigo_cupon() {
         return codigo_cupon;
+        // 
     }
     public void setCodigo_cupon(String codigo_cupon) {
         this.codigo_cupon = codigo_cupon;
